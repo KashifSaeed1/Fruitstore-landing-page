@@ -53,7 +53,7 @@ function Info() {
           animate="visible"
           className="text-gray-400">
           Healthy and yummy food for fresh morning breakfast. Eat Daily for good
-          health and mind Order now and get 20% off on your first order
+          health and mind Order now and get 20% off on your first order.
         </motion.p>
         {/* button section */}
         <BTN fade={FadeRight(1.5)}>

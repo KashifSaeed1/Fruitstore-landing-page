@@ -62,15 +62,14 @@ fruitstore/
 └── vite.config.js   # Vite configuration
 ```
 
----
+## 📬 Connect with Me  
 
-## 📬 Connect with Me
-👤 **Kashif Saeed**  
-🔗 [Portfolio](https://kashifsaeed.netlify.app)   **https://kashifsaeed.netlify.app**
-💼 [LinkedIn](https://www.linkedin.com/in/kashif-saeed-286711246/) **LinkedIn Rrofile**  
-📧 Email: **kashifsaeedman@gmail.com**
+💡 Let's connect and collaborate! Feel free to reach out. 🚀  
 
----
+🔗 **Portfolio:** [Kashif Saeed](https://kashifsaeed.netlify.app) 🌐 **https://kashifsaeed.netlify.app**  
+💼 **LinkedIn:** [Kashif Saeed](https://www.linkedin.com/in/kashif-saeed-286711246/) 🔗 **LinkedIn Profile**  
+📧 **Email:** [kashifsaeedman@gmail.com](mailto:kashifsaeedman@gmail.com) ✉️  
+
 
 ## ⭐ Show Your Support
 If you like this project, please consider **starring ⭐ the repository** on GitHub. Your support helps me continue building awesome projects! 🚀

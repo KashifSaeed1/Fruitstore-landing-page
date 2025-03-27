@@ -1,34 +1,12 @@
-<!-- # 🍏 FruitStore - Fresh Fruits Online
-
-Welcome to **FruitStore**, a modern and responsive landing page built with **React & Vite**.
-
-## 🛠 Built With
-- ⚡ React + Vite
-- 🎨 Tailwind CSS
-
-
-## 📥 Installation
-```sh
-git clone https://github.com/KashifSaeed1/Fruitstore-landing-page.git
-cd fruitstore
-npm install
-npm run dev
-
-
-
- -->
-
-
-
 # 🍏 FruitStore - Fresh Fruits Online
 
 Welcome to **FruitStore**, a modern, responsive, and visually appealing landing page built with **React & Vite**. Experience a sleek design with fast performance, perfect for showcasing fresh fruits online. 🍉🍇🍊
 
 ## 🚀 Live Demo
-🔗 https://fruitstoreonline.netlify.app *(Add your live demo link here)*
+🔗 https://fruitstoreonline.netlify.app 
 
 ## 📸 Preview
-![FruitStore Preview](#) *(Add an image or GIF preview of your project)*
+![FruitStore Preview](src/assets/fruitstore.png)
 
 ---
 
@@ -71,7 +49,7 @@ Now, open [http://localhost:5173](http://localhost:5173) in your browser to view
 ## 🖼 Screenshots
 Below is a preview of the **FruitStore** landing page:
 
-![FruitStore Preview](public/fruitstore.png)
+![FruitStore Preview](src/assets/fruitstore.png)
 
 
 ## 📂 Project Structure

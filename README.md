@@ -66,9 +66,9 @@ fruitstore/
 
 💡 Let's connect and collaborate! Feel free to reach out. 🚀  
 
-🔗 **Portfolio:** [Kashif Saeed](https://kashifsaeed.netlify.app) 🌐 **https://kashifsaeed.netlify.app**  
-💼 **LinkedIn:** [Kashif Saeed](https://www.linkedin.com/in/kashif-saeed-286711246/) 🔗 **LinkedIn Profile**  
-📧 **Email:** [kashifsaeedman@gmail.com](mailto:kashifsaeedman@gmail.com) ✉️  
+🔗 **Portfolio:** [Kashif Saeed](https://kashifsaeed.netlify.app)
+💼 **LinkedIn:** [Kashif Saeed](https://www.linkedin.com/in/kashif-saeed-286711246/) 
+📧 **Email:** [kashifsaeedman@gmail.com](mailto:kashifsaeedman@gmail.com)
 
 
 ## ⭐ Show Your Support

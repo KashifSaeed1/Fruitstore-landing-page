@@ -66,8 +66,8 @@ fruitstore/
 
 ## 📬 Connect with Me
 👤 **Kashif Saeed**  
-🔗 [Portfolio](https://kashifsaeed.netlify.app/contact)  
-💼 [LinkedIn](https://www.linkedin.com/in/kashif-saeed-286711246/)  
+🔗 [Portfolio](https://kashifsaeed.netlify.app)   **https://kashifsaeed.netlify.app**
+💼 [LinkedIn](https://www.linkedin.com/in/kashif-saeed-286711246/) **LinkedIn Rrofile**  
 📧 Email: **kashifsaeedman@gmail.com**
 
 ---

@@ -46,11 +46,6 @@ Now, open [http://localhost:5173](http://localhost:5173) in your browser to view
 ✅ Easy customization 🛠<br>
 ✅ SEO-friendly 🏆<br>
 
-## 🖼 Screenshots
-Below is a preview of the **FruitStore** landing page:
-
-![FruitStore Preview](src/assets/fruitstore.png)
-
 
 ## 📂 Project Structure
 ```

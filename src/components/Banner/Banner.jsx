@@ -47,15 +47,11 @@ function BannerInfo() {
           Brand info
         </motion.h1>
         <TextP fadeUp={FadeUp(0.7)}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores,
-          nobis omnis minus nesciunt consequatur cupiditate sequi reprehenderit.
-          Consequuntur itaque voluptates sint quasi nobis, ipsam iusto
-          voluptatem necessitatibus eos aliquam. Facere!
+    At FreshNest Fruits, we believe that good health begins with what you eat. Our store is a vibrant celebration of nature’s sweetest offerings—from crisp apples and juicy berries to exotic mangoes and refreshing citrus. We work closely with farmers who practice ethical and eco-friendly agriculture
         </TextP>
         <TextP fadeUp={FadeUp(0.9)}>
           {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vero et
-          enim nihil, voluptas cum.
+          FreshNest Fruits is a premium fresh fruit store dedicated to delivering nature’s best to your table. With a focus on quality, sustainability, and freshness, we handpick fruits from trusted local farms and global orchards to ensure every bite bursts with natural goodness.
         </TextP>
 
         {/* button section */}

@@ -32,14 +32,10 @@ function BannerInfo() {
         </motion.h1>
 
         <TextP fadeUP={FadeUp(0.7)}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores,
-          nobis omnis minus nesciunt consequatur cupiditate sequi reprehenderit.
-          Consequuntur itaque voluptates sint quasi nobis, ipsam iusto
-          voluptatem necessitatibus eos aliquam. Facere!
+         At FreshNest Fruits, we believe true wellness starts with the food you eat. Our store is a vibrant hub of nature’s finest fruits—ranging from crisp, orchard-fresh apples and sun-ripened berries to tropical mangoes and zesty citrus delights.
         </TextP>
         <TextP fadeUP={FadeUp(0.9)}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vero et
-          enim nihil, voluptas cum.
+          FreshNest Fruits is your destination for premium, hand-selected produce sourced from trusted local growers and the world’s best orchards.
         </TextP>
         {/* button section */}
         <BTN fade={FadeUp(1.1)}>Download the App</BTN>

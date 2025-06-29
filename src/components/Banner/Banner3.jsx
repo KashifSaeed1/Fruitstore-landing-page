@@ -43,10 +43,7 @@ function BannerInfo() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores,
-          nobis omnis minus nesciunt consequatur cupiditate sequi reprehenderit.
-          Consequuntur itaque voluptates sint quasi nobis, ipsam iusto
-          voluptatem necessitatibus eos aliquam. Facere!
+      FreshNest Fruits is your destination for premium, hand-selected produce sourced from trusted local growers and the world’s best orchards. Every piece of fruit is chosen for peak freshness, rich flavor, and natural goodness—delivering a delicious way to nourish your day.
         </motion.p>
 
         {/* button section */}

@@ -47,10 +47,10 @@ const Product = () => {
             Our Product Range
           </span>
           <h2 className="mt-6 text-3xl font-bold text-slate-900 sm:text-4xl">
-            Fresh fruits delivered with care.
+            Fresh, Vibrant Fruits Delivered Straight to Your Door
           </h2>
           <p className="mt-4 text-slate-600 sm:text-lg">
-            Discover seasonal picks and hand-selected fruits for your healthy meals, smoothies, and snacks.
+            Indulge in the finest selection of seasonal fruits, hand-picked for their exceptional quality and flavor. From juicy apples to creamy avocados, each piece is sourced sustainably to ensure freshness and nutrition in every bite.
           </p>
         </div>
 

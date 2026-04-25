@@ -8,9 +8,7 @@ const Banner = () => {
       <div
         className="container grid grid-cols-1 
       md:grid-cols-2 space-y-6 py-14">
-        {/* Banner image */}
         <BannerImage />
-        {/* Brand info */}
         <BannerInfo />
       </div>
     </section>
@@ -43,19 +41,24 @@ function BannerInfo() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-3xl lg:text-6xl font-bold uppercase">
-          Brand info
+          className="text-3xl lg:text-6xl font-bold uppercase text-primary">
+          Welcome to FreshNest Fruits
         </motion.h1>
         <TextP fadeUp={FadeUp(0.7)}>
-    At FreshNest Fruits, we believe that good health begins with what you eat. Our store is a vibrant celebration of nature’s sweetest offerings—from crisp apples and juicy berries to exotic mangoes and refreshing citrus. We work closely with farmers who practice ethical and eco-friendly agriculture
+          At FreshNest Fruits, we believe that good health begins with what you eat. Our store is a vibrant celebration of nature’s sweetest offerings from crisp apples and juicy berries to exotic mangoes and refreshing citrus. We work closely with farmers who practice ethical and eco-friendly agriculture, ensuring every fruit is sustainably sourced and bursting with flavor.
         </TextP>
-        <TextP fadeUp={FadeUp(0.9)}>
-          {" "}
-          FreshNest Fruits is a premium fresh fruit store dedicated to delivering nature’s best to your table. With a focus on quality, sustainability, and freshness, we handpick fruits from trusted local farms and global orchards to ensure every bite bursts with natural goodness.
-        </TextP>
-
-        {/* button section */}
-        <BTN fade={FadeUp(1.1)}>learn more</BTN>
+        <motion.ul
+          variants={FadeUp(1.0)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-gray-600 list-disc list-inside space-y-1">
+          <li>Premium quality fruits</li>
+          <li>Daily fresh arrivals</li>
+          <li>Eco-friendly sourcing</li>
+          <li>Fast home delivery</li>
+        </motion.ul>
+        <BTN fade={FadeUp(1.2)}>Shop Now</BTN>
       </div>
     </div>
   );

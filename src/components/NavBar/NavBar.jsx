@@ -11,7 +11,7 @@ const NavBarMenu = [
   { id: 4, title: "Categories", url: "/categories" }, 
   { id: 5, title: "Deals", url: "/deals" },           
   { id: 6, title: "About", url: "/about" },
-  { id: 7, title: "Contact", url: "/contact" },
+  { id: 7, title: "Contact", url: "#contact" },
 ];
 
 const NavBar = () => {
@@ -32,7 +32,6 @@ const NavBar = () => {
 
 
           <Menu />
-
           <div className="flex items-center gap-4">
             <div className="hidden lg:flex items-center bg-gray-100 rounded-full px-3 py-1">
               <MdSearch className="text-gray-500 text-xl" />

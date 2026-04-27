@@ -63,7 +63,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-white to-primary/10 pt-20 pb-8 mt-20 border-t border-primary/20">
+    <footer className="bg-green-50 pt-20 pb-8 mt-20  border-primary/20">
       <Toaster position="top-right" />
       <div className="container px-6 mx-auto">
         

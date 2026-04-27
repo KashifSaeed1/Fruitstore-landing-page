@@ -11,13 +11,37 @@ import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [cart, setCart] = useState([]);
+
+  const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
+
+  const handleAddToCart = (product) => {
+    setCart((existingCart) => {
+      const found = existingCart.find((item) => item.id === product.id);
+      if (found) {
+        return existingCart.map((item) =>
+          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        );
+      }
+      return [...existingCart, { ...product, quantity: 1 }];
+    });
+  };
+
+  const handleRemoveFromCart = (productId) => {
+    setCart((existingCart) => existingCart.filter((item) => item.id !== productId));
+  };
 
   return (
     <>
       <main className="overflow-x-hidden">
-        <NavBar setSearchQuery={setSearchQuery} />
+        <NavBar setSearchQuery={setSearchQuery} cartItemCount={cartItemCount} />
         <Hero />
-        <Product searchQuery={searchQuery} />
+        <Product
+          searchQuery={searchQuery}
+          cart={cart}
+          onAddToCart={handleAddToCart}
+          onRemoveFromCart={handleRemoveFromCart}
+        />
         <Menus />
         <Banner />
         <Banner2 />

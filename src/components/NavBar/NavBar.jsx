@@ -14,7 +14,7 @@ const NavBarMenu = [
   { id: 7, title: "Contact", url: "#contact" },
 ];
 
-const NavBar = ({ setSearchQuery }) => {
+const NavBar = ({ setSearchQuery, cartItemCount }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -45,8 +45,8 @@ const NavBar = ({ setSearchQuery }) => {
             
             <button className="relative text-2xl p-2 rounded-full hover:bg-primary/10 hover:text-primary transition-colors duration-300">
               <MdOutlineShoppingCart />
-              <span className="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-1.5 rounded-full">
-                3
+              <span className="absolute top-0 right-0 min-w-[18px] text-[10px] font-bold px-1.5 rounded-full bg-primary text-white text-center">
+                {cartItemCount}
               </span>
             </button>
 

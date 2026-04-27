@@ -38,7 +38,12 @@ const products = [
   },
 ];
 
-const Product = () => {
+const Product = ({ searchQuery }) => {
+  const filteredProducts = products.filter(product =>
+    product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    product.category.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <section id="products" className="bg-[#fff5f6] py-16 scroll-mt-28">
       <div className="container mx-auto px-4">
@@ -55,34 +60,42 @@ const Product = () => {
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((product) => (
-            <article
-              key={product.id}
-              className="group rounded-[2rem] bg-white p-6 shadow-[0_18px_64px_rgba(222,44,77,0.12)] transition-transform duration-300 hover:-translate-y-2"
-            >
-              <div className="flex items-center justify-between mb-5">
-                <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-                  {product.category}
-                </span>
-                <span className="text-sm font-semibold text-slate-500">{product.price}</span>
-              </div>
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((product) => (
+              <article
+                key={product.id}
+                className="group rounded-[2rem] bg-white p-6 shadow-[0_18px_64px_rgba(222,44,77,0.12)] transition-transform duration-300 hover:-translate-y-2"
+              >
+                <div className="flex items-center justify-between mb-5">
+                  <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+                    {product.category}
+                  </span>
+                  <span className="text-sm font-semibold text-slate-500">{product.price}</span>
+                </div>
 
-              <div className="relative mb-6 h-40 overflow-hidden rounded-[2rem] bg-secondary/10 p-5">
-                <img src={product.image} alt={product.title} className="absolute inset-x-0 bottom-0 mx-auto h-full object-contain" />
-              </div>
+                <div className="relative mb-6 h-40 overflow-hidden rounded-[2rem] bg-secondary/10 p-5">
+                  <img src={product.image} alt={product.title} className="absolute inset-x-0 bottom-0 mx-auto h-full object-contain" />
+                </div>
 
-              <div>
-                <h3 className="text-xl font-bold text-slate-900">{product.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-500">{product.description}</p>
-              </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900">{product.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-500">{product.description}</p>
+                </div>
 
-              <div className="mt-8 flex items-center justify-between gap-4">
-                <button className="primary-btn w-full rounded-full py-3 text-sm font-semibold sm:w-auto sm:px-6">
-                  Add to cart
-                </button>
-              </div>
-            </article>
-          ))}
+                <div className="mt-8 flex items-center justify-between gap-4">
+                  <button className="primary-btn w-full rounded-full py-3 text-sm font-semibold sm:w-auto sm:px-6">
+                    Add to cart
+                  </button>
+                </div>
+              </article>
+            ))
+          ) : (
+            <div className="col-span-full text-center py-12">
+              <p className="text-lg text-gray-500">
+                {searchQuery ? `No products found matching "${searchQuery}"` : "No products available"}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>

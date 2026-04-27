@@ -14,7 +14,7 @@ const NavBarMenu = [
   { id: 7, title: "Contact", url: "#contact" },
 ];
 
-const NavBar = () => {
+const NavBar = ({ setSearchQuery }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -39,6 +39,7 @@ const NavBar = () => {
                 type="text" 
                 placeholder="Search..." 
                 className="bg-transparent border-none focus:ring-0 text-sm w-24 focus:w-40 transition-all duration-300"
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
             

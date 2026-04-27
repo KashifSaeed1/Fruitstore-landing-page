@@ -1,3 +1,4 @@
+import { useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import Hero from "./components/Hero/Hero";
 import Menus from "./components/Menus/Menus";
@@ -9,12 +10,14 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
   return (
     <>
       <main className="overflow-x-hidden">
-        <NavBar />
+        <NavBar setSearchQuery={setSearchQuery} />
         <Hero />
-        <Product />
+        <Product searchQuery={searchQuery} />
         <Menus />
         <Banner />
         <Banner2 />

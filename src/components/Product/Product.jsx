@@ -1,3 +1,4 @@
+import { MdOutlineShoppingCart } from "react-icons/md";
 import apple from "../../assets/fruits/apple.png";
 import avocado from "../../assets/fruits/avocado.png";
 import cherry from "../../assets/fruits/cherry.png";
@@ -85,19 +86,32 @@ const Product = ({ searchQuery, cart, onAddToCart, onRemoveFromCart }) => {
                     <p className="mt-3 text-sm leading-6 text-slate-500">{product.description}</p>
                   </div>
 
-                  <div className="mt-8 flex flex-col gap-3">
-                    <button
-                      type="button"
-                      onClick={() => (inCart ? onRemoveFromCart(product.id) : onAddToCart(product))}
-                      className={`w-full rounded-full py-3 text-sm font-semibold sm:px-6 transition-all ${inCart ? "bg-red-500 text-white hover:bg-red-600" : "bg-primary text-white hover:bg-primary/90"}`}
-                    >
-                      {inCart ? `Remove from cart${cartItem.quantity > 1 ? ` (${cartItem.quantity})` : ""}` : "Add to cart"}
-                    </button>
-                    {inCart ? (
-                      <p className="text-center text-sm text-green-600">
-                        Added to cart ({cartItem.quantity})
-                      </p>
-                    ) : null}
+                  <div className="mt-8 rounded-[2rem] border border-slate-200 bg-slate-50 p-5 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_28px_80px_rgba(222,44,77,0.15)]">
+                    <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                      <div>
+                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">{product.price}</p>
+                        {inCart && (
+                          <p className="mt-2 inline-flex items-center gap-2 rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-700">
+                            <span className="h-2.5 w-2.5 rounded-full bg-emerald-600" />
+                            In cart ({cartItem.quantity})
+                          </p>
+                        )}
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={() => (inCart ? onRemoveFromCart(product.id) : onAddToCart(product))}
+                        className={`inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 ${inCart ? "bg-red-500 hover:bg-red-600" : "bg-gradient-to-r from-primary to-pink-500 hover:from-pink-500 hover:to-primary"}`}
+                      >
+                        <MdOutlineShoppingCart className="text-lg" />
+                        {inCart ? "Remove" : "Add to cart"}
+                      </button>
+                    </div>
+                    <p className="mt-4 text-center text-sm text-slate-500">
+                      {inCart
+                        ? "This item stays in your cart until you remove it."
+                        : "Tap add to cart to reserve this fresh fruit for later."}
+                    </p>
                   </div>
                 </article>
               );

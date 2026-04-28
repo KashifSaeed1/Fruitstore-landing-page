@@ -6,12 +6,14 @@ import Product from "./components/Product/Product";
 import Banner from "./components/Banner/Banner";
 import Banner2 from "./components/Banner/Banner2";
 import Banner3 from "./components/Banner/Banner3";
+import Cart from "./components/Cart/Cart";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [cart, setCart] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
 
@@ -31,23 +33,42 @@ const App = () => {
     setCart((existingCart) => existingCart.filter((item) => item.id !== productId));
   };
 
+  const handleToggleCart = () => {
+    setIsCartOpen((open) => !open);
+  };
+
+  const handleContinueShopping = () => {
+    setIsCartOpen(false);
+  };
+
   return (
     <>
       <main className="overflow-x-hidden">
-        <NavBar setSearchQuery={setSearchQuery} cartItemCount={cartItemCount} />
-        <Hero />
-        <Product
-          searchQuery={searchQuery}
-          cart={cart}
-          onAddToCart={handleAddToCart}
-          onRemoveFromCart={handleRemoveFromCart}
+        <NavBar
+          setSearchQuery={setSearchQuery}
+          cartItemCount={cartItemCount}
+          onCartClick={handleToggleCart}
         />
-        <Menus />
-        <Banner />
-        <Banner2 />
-        <Banner3 />
-        <Contact />
-        <Footer />
+
+        {isCartOpen ? (
+          <Cart cart={cart} onRemoveFromCart={handleRemoveFromCart} onContinueShopping={handleContinueShopping} />
+        ) : (
+          <>
+            <Hero />
+            <Product
+              searchQuery={searchQuery}
+              cart={cart}
+              onAddToCart={handleAddToCart}
+              onRemoveFromCart={handleRemoveFromCart}
+            />
+            <Menus />
+            <Banner />
+            <Banner2 />
+            <Banner3 />
+            <Contact />
+            <Footer />
+          </>
+        )}
       </main>
     </>
   );

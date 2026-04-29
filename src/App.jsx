@@ -7,6 +7,7 @@ import Banner from "./components/Banner/Banner";
 import Banner2 from "./components/Banner/Banner2";
 import Banner3 from "./components/Banner/Banner3";
 import Banner4 from "./components/Banner/Banner4";
+import Banner5 from "./components/Banner/Banner5";
 import Cart from "./components/Cart/Cart";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -67,6 +68,7 @@ const App = () => {
             <Banner2 />
             <Banner3 />
             <Banner4 />
+            <Banner5 />
             <Contact />
             <Footer />
           </>

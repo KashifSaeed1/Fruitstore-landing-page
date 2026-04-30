@@ -5,17 +5,24 @@ import { motion, AnimatePresence } from "framer-motion";
 import Logo from "../Logo/Logo";
 
 const NavBarMenu = [
-  { id: 1, title: "Home", url: "/" },
-  { id: 2, title: "Products", url: "#products" },
-  { id: 3, title: "Shop", url: "/shop" },
-  { id: 4, title: "Categories", url: "/categories" }, 
-  { id: 5, title: "Deals", url: "/deals" },           
-  { id: 6, title: "About", url: "/about" },
-  { id: 7, title: "Contact", url: "#contact" },
+  { id: 1, title: "Home", url: "/", page: "home" },
+  { id: 2, title: "Products", url: "#products", page: "home" },
+  { id: 3, title: "Shop", url: "/shop", page: "shop" },
+  { id: 4, title: "Categories", url: "#categories", page: "home" },
+  { id: 5, title: "Deals", url: "#deals", page: "home" },
+  { id: 6, title: "About", url: "#about", page: "home" },
+  { id: 7, title: "Contact", url: "#contact", page: "home" },
 ];
 
-const NavBar = ({ setSearchQuery, cartItemCount, onCartClick }) => {
+const NavBar = ({ setSearchQuery, cartItemCount, onCartClick, onNavigate }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = (event, link) => {
+    if (link.page) {
+      event.preventDefault();
+      onNavigate(link.page, link.url.startsWith("#") ? link.url : undefined);
+    }
+  };
 
   return (
     <>
@@ -31,7 +38,7 @@ const NavBar = ({ setSearchQuery, cartItemCount, onCartClick }) => {
           </div>
 
 
-          <Menu />
+          <Menu onMenuLinkClick={handleClick} />
           <div className="flex items-center gap-4">
             <div className="hidden lg:flex items-center bg-gray-100 rounded-full px-3 py-1">
               <MdSearch className="text-gray-500 text-xl" />
@@ -62,12 +69,12 @@ const NavBar = ({ setSearchQuery, cartItemCount, onCartClick }) => {
       </nav>
       <div className="h-[80px]"></div>
 
-      <ResponsiveMenu open={isOpen} menu={NavBarMenu} closeMenu={() => setIsOpen(false)} />
+      <ResponsiveMenu open={isOpen} menu={NavBarMenu} closeMenu={() => setIsOpen(false)} onNavigate={onNavigate} />
     </>
   );
 };
 
-function Menu() {
+function Menu({ onMenuLinkClick }) {
   return (
     <div className="hidden md:block">
       <ul className="flex items-center gap-8">
@@ -75,6 +82,7 @@ function Menu() {
           <li key={link.id} className="relative group">
             <a
               href={link.url}
+              onClick={(event) => onMenuLinkClick(event, link)}
               className="text-gray-700 font-medium text-lg hover:text-primary transition-colors duration-300"
             >
               {link.title}

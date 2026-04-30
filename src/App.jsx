@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Hero from "./components/Hero/Hero";
 import Menus from "./components/Menus/Menus";
 import Product from "./components/Product/Product";
+import Categories from "./components/Categories/Categories";
 import Banner from "./components/Banner/Banner";
 import Banner2 from "./components/Banner/Banner2";
 import Banner3 from "./components/Banner/Banner3";
@@ -86,6 +87,7 @@ const App = () => {
               onAddToCart={handleAddToCart}
               onRemoveFromCart={handleRemoveFromCart}
             />
+            <Categories />
             <Menus />
             <Banner />
             <Banner2 />

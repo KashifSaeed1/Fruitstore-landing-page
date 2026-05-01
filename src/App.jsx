@@ -11,6 +11,7 @@ import Banner4 from "./components/Banner/Banner4";
 import Banner5 from "./components/Banner/Banner5";
 import Cart from "./components/Cart/Cart";
 import Contact from "./components/Contact/Contact";
+import Deals from "./components/Deals/Deals";
 import Footer from "./components/Footer/Footer";
 import Shop from "./pages/Shop";
 
@@ -88,6 +89,7 @@ const App = () => {
               onRemoveFromCart={handleRemoveFromCart}
             />
             <Categories />
+            <Deals />
             <Menus />
             <Banner />
             <Banner2 />

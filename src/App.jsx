@@ -12,6 +12,7 @@ import Banner5 from "./components/Banner/Banner5";
 import Cart from "./components/Cart/Cart";
 import Contact from "./components/Contact/Contact";
 import Deals from "./components/Deals/Deals";
+import About from "./components/About/About";
 import Footer from "./components/Footer/Footer";
 import Shop from "./pages/Shop";
 
@@ -90,6 +91,7 @@ const App = () => {
             />
             <Categories />
             <Deals />
+            <About />
             <Menus />
             <Banner />
             <Banner2 />
